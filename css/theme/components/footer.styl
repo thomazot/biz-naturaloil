@@ -1,0 +1,60 @@
+.footer
+    @media media-max-lg
+        text-align: center
+
+        .flex--a-center
+            justify-content: center
+
+    .pays__svg
+        height: 25px
+
+    .socials__svg
+        height: 30px
+
+    &__title
+        padding: 20px 0
+        color: var(--text-two)
+        font-weight: bold
+        font-size: 18px
+
+        @media media-min-lg
+            padding-top: 0
+
+    &__box
+        padding: 16px
+        min-width: 0
+
+        &--socials
+            .footer__title
+                padding-top: 25px
+
+    &__content
+        color: var(--text-two)
+        font-weight: regular
+        font-size: 14px
+
+        > a
+            display: block
+            padding: 5px 0
+            color: currentColor
+
+        p
+            padding: 5px 0
+
+    &__row
+        .footer__container
+            @media media-min-lg
+                display: flex
+                justify-content: space-between
+
+    &__whatsapp
+        display: inline-flex !important
+        justify-content: flex-start
+        align-items: center
+        color: var(--whatsapp) !important
+
+        .ico
+            margin-right: 5px
+            width: 20px
+            height: 20px
+            fill: currentColor
