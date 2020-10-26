@@ -11811,6 +11811,43 @@ body {
   transform: none;
 }
 
+.breadcrumb__home .breadcrumb__link:before {
+  display: none;
+}
+.breadcrumb__link {
+  color: var(--title);
+  font-weight: 400;
+  font-size: 0.88rem;
+}
+.breadcrumb__last {
+  display: block;
+  margin-bottom: -0.13rem;
+  color: var(--secundary);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.breadcrumb__sep {
+  color: var(--title);
+  font-size: 0.5rem;
+  line-height: 1;
+}
+.breadcrumb__sep span {
+  display: none;
+}
+.breadcrumb__sep:before {
+  content: '\f054';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'biz_icons';
+  speak: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  margin-bottom: -0.13rem;
+}
+
 @media (max-width: 992px) {
   .categories__show {
     order: -1;
@@ -12135,10 +12172,6 @@ body {
 
 #escolha-a-finalidade {
   --color: #e5e5e5;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: calc(100% - 32px);
-  width: 75rem;
 }
 #escolha-a-finalidade:before {
   display: flex;
@@ -12153,7 +12186,10 @@ body {
 }
 #escolha-a-finalidade .ul--0 {
   display: flex;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 32px);
+  width: 75rem;
 }
 #escolha-a-finalidade .ul--0 .slick-list {
   flex: 1;
@@ -12208,6 +12244,17 @@ body {
 #escolha-a-finalidade .li--0 {
   margin: 0 0.5rem;
   border-radius: 38px;
+}
+body:not(.cms-home) #escolha-a-finalidade {
+  padding-bottom: 1.88rem;
+  border-bottom: solid 1px var(--border-products);
+}
+body:not(.cms-home) #escolha-a-finalidade:before {
+  padding-top: 0.63rem;
+}
+body:not(.cms-home) #escolha-a-finalidade .slick-arrow {
+  background: #e9f2f2;
+  color: rgba(var(--text-two-rgb), .3);
 }
 .footer .mymenu .a--0 {
   color: var(--text-two);
@@ -12548,6 +12595,26 @@ body {
   width: 2.19rem;
   height: 2.19rem;
   fill: var(--secundary);
+}
+#banner__regua-de-vantagens {
+  --bg: #273b39;
+}
+body:not(.cms-home) #banner__regua-de-vantagens {
+  margin-top: -1rem;
+  background: var(--bg);
+}
+@media (min-width: 993px) {
+  body:not(.cms-home) #banner__regua-de-vantagens {
+    box-shadow: 800px 0 0 var(--bg), -800px 0 0 var(--bg);
+  }
+}
+@media (max-width: 992px) {
+  body:not(.cms-home) #banner__regua-de-vantagens {
+    box-shadow: 300px 0 0 var(--bg), -300px 0 0 var(--bg);
+  }
+}
+body:not(.cms-home) #banner__regua-de-vantagens .ruler {
+  color: #fff;
 }
 
 .search {
