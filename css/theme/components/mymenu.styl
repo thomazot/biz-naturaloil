@@ -1,0 +1,67 @@
+#escolha-a-finalidade
+    --color: #E5E5E5
+
+    container()
+
+    &:before
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 30px 0
+        color: var(--title)
+        content: 'Escolha a Finalidade'
+        font-weight: bold
+        font-size: 20px
+        line-height: 32px
+
+    .ul--0
+        display: flex
+        width: 100%
+
+        .slick
+            &-list
+                flex: 1
+                margin: 0 30px
+                min-width: 0
+
+            &-arrow
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 36px
+                height: 36px
+                border-radius: 50%
+                background: #fff
+                box-shadow: none
+                color: var(--color)
+                font-size: 0
+                line-height: 1
+
+                &:before
+                    font-size: 12px
+
+            &-next
+                &:before
+                    icon('\f054')
+
+            &-prev
+                &:before
+                    icon('\f053')
+
+    .a--0
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 16px
+        height: 38px
+
+    .li--0
+        margin: 0 8px
+        border-radius: 38px
+
+.mymenu
+    .footer &
+        .a--0
+            color: var(--text-two)
+            font-weight: regular
+            font-size: 14px

@@ -1,5 +1,9 @@
-@media media-max-lg
-    .categories
+.categories
+    @media media-max-lg
+        &__show
+            order: -1
+            margin-right: 10px
+
         .parent
             position: relative
 
@@ -41,22 +45,61 @@
         .all-li--0
             padding-bottom: 0
 
-@media media-min-lg
-    .categories
+    @media media-min-lg
         flex: 1
+        align-self: stretch
         margin-bottom: 0 !important
+        margin-left: 55px
         min-width: 0
         background: none
 
+        &__all
+            display: none
+
         .a--0
-            color: var(--primary)
-            text-transform: uppercase
+            padding: 0 20px
+            height: 100%
+            color: var(--text)
             white-space: nowrap
-            font-weight: semibold
-            font-size: 14px
+            font-weight: medium
+            font-size: 16px
+
+        &--justify
+            .a--1
+                padding: 12px 0
+                color: var(--primary-contrast)
+
+                &:hover
+                    color: var(--secundary)
 
         .li--0
-            order: 1
+            position: static
+            flex: 0 0 auto
+            height: 100%
 
-        &__all
-            order: 2
+            &:hover
+                .a--0
+                    background: none
+                    color: var(--secundary)
+                    font-weight: bold
+
+        .ul--0
+            justify-content: flex-start
+            padding: 0 20px
+            height: 100%
+
+        .ul--1
+            &:before
+                display: block
+                padding: 12px 0
+                color: var(--secundary)
+                content: attr(data-title)
+                font-weight: bold
+                font-size: 20px
+
+        .box--1
+            left: 0
+            padding: 30px 55px
+            width: var(--width, 100%)
+            border-radius: var(--radius)
+            background: unquote('rgba(var(--primary-rgb), var(--alpha))')

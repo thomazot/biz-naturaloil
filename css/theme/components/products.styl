@@ -1,0 +1,131 @@
+.products
+    &__title
+        padding: 30px 0
+        color: var(--title)
+        text-align: center
+        font-weight: bold
+        font-size: 20px
+        line-height: 32px
+
+    &__case
+        --price: #232E32
+
+        &
+            padding: 10px
+            border-radius: var(--radius)
+            box-shadow: none
+            transition: all .2s ease-in-out
+
+        .link-wishlist
+            position: absolute
+            top: 10px
+            left: 12px
+            color: var(--secundary)
+
+            .ico
+                width: 28px
+                height: 24px
+
+        .product-categories-list
+            li:not(:first-child)
+                display: none
+
+            .link
+                color: var(--secundary)
+                font-weight: medium
+                font-size: 14px
+
+        &:hover
+            @media media-min-lg
+                box-shadow: inset 0 0 0 1px var(--border-products)
+
+                .products__actions
+                    opacity: 1
+                    transition: all .2s ease-in-out
+                    transform: translateY(0)
+
+    &__name
+        display: block
+        padding-bottom: 16px
+        color: var(--text-two)
+        font-weight: medium
+        font-size: 16px
+
+    &__prices
+        padding-top: 16px
+        border-top: solid 1px var(--border-products)
+
+        .price-box
+            .old-price
+                .label
+                    display: none
+
+                .price span
+                    color: var(--price)
+                    font-weight: medium
+                    font-size: 12px
+                    opacity: .5
+
+            .regular-price, .special-price
+                .label
+                    display: none
+
+                .price span
+                    color: var(--tertiary)
+                    font-weight: bold
+                    font-size: 20px
+
+            .minimal-price
+                .label span
+                    color: unquote('rgba(var(--text-two-rgb), .6)')
+                    font-weight: regular
+                    font-size: 12px
+
+                .price span
+                    color: var(--tertiary)
+                    font-weight: bold
+                    font-size: 20px
+
+        .preco-parcelado-sem-juros
+            + .preco-parcelado
+                display: none
+
+        .price-box-parcelado
+            .s-juros, .upto
+                display: none
+
+            .preco-parcelado, .preco-parcelado-sem-juros
+                font-size: 12px
+
+                &:before
+                    content: 'ou em '
+
+                &:before, .de
+                    color: var(--price)
+                    opacity: .5
+
+                .num, .value
+                    span
+                        color: var(--price)
+
+    &__actions
+        margin-top: auto
+
+        @media media-min-lg
+            opacity: 0
+            transform: translateY(10px)
+
+        .btn-cart
+            width: 100%
+            background: var(--button)
+            box-shadow: none
+            color: var(--button-contrast)
+            font-weight: bold
+            font-size: 16px
+
+            &:hover
+                background: @background
+                color: @color
+
+                @media media-min-lg
+                    background: unquote('rgba(var(--button-rgb), .8)')

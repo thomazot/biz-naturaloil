@@ -1,0 +1,56 @@
+<div class="footer__row footer__row--four">
+    <div class="footer__container">
+        <div class="footer__box footer__box--socials">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbizcommerce&tabs&width=340&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=522720801260208" width="340" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <h3 class="footer__title">Redes Sociais</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="all"}}
+            </div>
+        </div>
+        <div class="footer__box footer__box--contato">
+            <h3 class="footer__title">Contato</h3>
+            <div class="footer__content">
+                <p>Telefone: <a href="tel:11992641089">(11) 9 9264 - 1080</a></p>
+                <p>E-mail: <a href="mailto:sac.thebesthair@gmail.com">sac.thebesthair@gmail.com</a></p>
+                <p>Horário de Atendimento: 9:00 ás 17:00</p>
+                <p>Endereço: Av. do Parques, 45 - Sala 1015-B</p>
+                <p>Alphasitio Santana de Parnaiba, São Paulo</p>
+                <p>06455-300 Brasil</p>
+                <a class="footer__whatsapp" href="#">
+                    <svg class="ico z-whatsapp"><use xlink:href="#z-whatsapp" /></svg>
+                    <span>(11) 9 9264 - 1080</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer__box footer__box--institucional">
+            <h3 class="footer__title">Institucional</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-institucional"}}
+            </div>
+        </div>
+
+        <div class="footer__box footer__box--ajuda">
+            <h3 class="footer__title">Ajuda</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-ajuda"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__row footer__row--two">
+    <div class="footer__container">
+        <div class="footer__box footer__box--pagamento">
+            <h3 class="footer__title">Pagamento</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+            </div>
+        </div>
+        <div class="footer__box footer__box--seguranca">
+            <h3 class="footer__title">Segurança</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer" seals="all"}}
+            </div>
+        </div>
+    </div>
+</div>

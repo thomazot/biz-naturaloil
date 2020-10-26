@@ -1,0 +1,28 @@
+.myaccount
+    .header &
+        @media media-max-lg
+            margin-left: 3px
+
+        @media media-max-sm
+            margin-left: 0
+
+    &__header
+        color: var(--tertiary)
+
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 48px
+            height: 48px
+            color: currentColor
+
+        .ico
+            width: 24px
+            height: 24px
+
+        &:hover
+            color: var(--secundary)
+
+    &__content
+        display: none !important

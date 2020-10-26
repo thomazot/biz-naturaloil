@@ -1,0 +1,85 @@
+.search
+    --color: #C5D1D5
+
+    .header &
+        @media media-min-sm
+            flex: 1
+            min-width: 0
+
+        @media media-min-lg
+            flex: 0 0 auto
+            margin-left: auto
+
+        @media media-max-sm
+            &.on
+                .search
+                    &__input
+                        height: 90px
+                        border-radius: 0
+
+                    &__hide
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        height: 85px
+
+        .input-box
+            @media media-min-sm
+                position: static
+
+        &:hover
+            .search__input
+                box-shadow: 0 0 0 1px var(--border-blue), 0 0 0 3px var(--border-shadow)
+
+                @media media-min-sm
+                    padding: 0 50px 0 16px
+                    max-width: 100%
+
+                @media media-min-lg
+                    padding: 0 50px 0 16px
+                    min-width: 50px
+                    max-width: 1000px
+
+        &__input
+            @media media-min-sm
+                position: absolute
+                right: 0
+                z-index: 1
+                padding: 0
+                max-width: 0
+                height: 100%
+                border: 0
+                border-radius: var(--radius)
+                box-shadow: none
+                transition: all .2s ease-in
+
+            &::placeholder
+                color: var(--color)
+
+            &:focus::placeholder
+                color: transparent
+
+            @media media-max-sm
+                max-width: 100%
+
+        &__button
+            position: relative
+            z-index: 2
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 50px
+            height: 50px
+            border-radius: var(--radius)
+            background: var(--secundary-contrast)
+            box-shadow: none
+            color: var(--secundary)
+
+            .ico
+                width: 20px
+                height: 20px
+
+            &:hover
+                background: @background
+                color: @color

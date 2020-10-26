@@ -1,0 +1,25 @@
+<h2 class="products__header">
+    <a href="@url" itemprop="url" title="Mais detalhes" class="product-link">
+        <span class="products__image product-image">@foto(260x260)</span>
+    </a>
+    @selos
+    @bt(listadesejos "<svg class='ico z-heart'><use xlink:href='#z-heart' /></svg>")
+</h2>
+<div class="products__main">
+    <div class="products__category">
+        @categorias
+    </div>
+	<a href="@url" title="@nome(60)" class="products__name">@nome</a>
+
+	@if(is_disponivel)
+        <div class="products__prices">
+            @preco
+            @preco(parcelado)
+        </div>
+    @else(is_disponivel)
+        <div class="esgotado">Produto Esgotado</div>
+	@endif(is_disponivel)
+</div>
+<div class="products__actions">
+    @bt(comprar "Comprar")
+</div>
