@@ -1,4 +1,11 @@
 .logo
     .header &
         img, svg
-            height: 48px
+            max-height: 90px
+            height: 90px
+            transitiona: all .2s ease-in-out
+            object-fit: contain
+
+            .scrolling &
+                @media media-min-lg
+                    max-height: 80px
