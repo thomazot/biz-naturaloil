@@ -12505,3 +12505,22 @@ body {
   color: var(--secundary);
 }
 
+
+.cms-home .main {
+  margin: 0;
+  max-width: 100%;
+}
+.cms-home .main-container {
+  max-width: 100%;
+  width: 100%;
+}
+.cms-home .main-container .products + .products {
+  margin-top: 2.5rem;
+  border-top: solid 1px var(--border-products);
+}
+.cms-home .main-container .products__list {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 32px);
+  width: 75rem;
+}
