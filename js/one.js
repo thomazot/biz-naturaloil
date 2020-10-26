@@ -824,7 +824,6 @@ function default_carrossel_produtos() {
                         [568, 2],
                         [768, 3],
                         [1024, 4],
-                        [1270, 5],
                     ],
                     beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -1464,6 +1463,17 @@ $j(document)
             menuTitle($)
             search($)
         })
+
+        const fidelidade = $('#escolha-a-finalidade .ul--0')
+
+        if (fidelidade.length) {
+            fidelidade.slick({
+                variableWidth: true,
+                infinite: true,
+                slidesToScroll: 1,
+                slidesToShow: 1,
+            })
+        }
     })
     .on('resizeStop', function (e) {
         calcBoxMenu($j)

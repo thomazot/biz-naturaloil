@@ -1,2 +1,21 @@
 .cms-home .header-container + .banner
-    margin: 0
+    img
+        width: 100%
+        object-fit: contain
+
+#banner__banner-duo, #banner__regua-de-vantagens
+    container()
+
+#banner__banner-duo
+    .banner
+        &__link
+            padding: 15px
+
+        &__wrapper
+            margin: -15px
+            width: auto !important
+
+    &:not(.banner--nojs) img.d_img
+        position: static
+        width: 100%
+        transform: none
