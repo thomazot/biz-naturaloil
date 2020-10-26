@@ -1,0 +1,28 @@
+.toolbar
+    .amount, .limiter
+        display: none
+
+    .sorter
+        margin-left: auto
+
+    .sort-by
+        label
+            color: var(--title)
+            font-weight: bold
+            font-size: 0
+            opacity: 1
+
+            &:before
+                content: 'Ordenar por'
+                font-size: 18px
+
+        select
+            padding: 0 15px
+            height: 50px
+            border: solid 1px var(--border-blue)
+            border-radius: var(--radius)
+            background: no-repeat url(select) center right 16px
+            box-shadow: 0 0 0 3px var(--border-shadow)
+            color: #C5D1D5
+            font-size: 14px
+            appearance: none

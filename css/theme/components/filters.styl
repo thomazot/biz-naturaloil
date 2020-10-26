@@ -1,0 +1,43 @@
+.filters
+    @media media-max-lg
+        &__filter
+            .a-filter, .a--0
+                color: #fff
+
+            .count
+                display: none
+
+    @media media-min-lg
+        .title
+            color: var(--title)
+            font-weight: bold
+            font-size: 18px
+
+        &__filter
+            padding: 0
+            box-shadow: none
+
+            .ul--0, > ol
+                padding: 25px
+                border: solid 1px var(--border-products)
+                border-radius: var(--radius)
+
+            &:hover
+                box-shadow: @box-shadow
+
+            &.categoria
+                .filters__name
+                    display: none
+
+            .a-filter, .a--0
+                color: var(--text)
+                font-weight: regular
+                font-size: 16px
+
+            .count
+                display: none
+
+        &__name
+            color: var(--title)
+            font-weight: bold
+            font-size: 18px
