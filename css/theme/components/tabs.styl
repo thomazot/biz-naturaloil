@@ -1,0 +1,19 @@
+.tabs
+    &__content
+        &, .std
+            color: var(--text)
+            font-weight: regular
+            font-size: 16px
+
+    @media media-min-sm
+        shadowBorder()
+
+        padding: 30px
+        background: var(--border-products)
+
+        &__tab.on, &__tab, &__content
+            border: 0
+            background: none
+
+        &__tab, &__tab.on
+            titleCollateral()

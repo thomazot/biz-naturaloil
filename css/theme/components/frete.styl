@@ -1,0 +1,64 @@
+.frete
+    &__content
+        display: block
+
+    &__title
+        justify-content: flex-start
+        margin: 0
+        box-shadow: none
+        color: var(--text)
+        font-weight: bold
+        font-size: 16px
+
+        .ico
+            width: 30px
+            height: 28px
+            fill: var(--secundary)
+
+        span
+            display: none
+
+        &:after
+            content: 'Calcule a entrega'
+
+    &__form
+        margin-right: 20px
+        border: solid 1px var(--border-blue)
+        border-radius: var(--radius)
+        box-shadow: 0 0 0 3px var(--border-shadow)
+
+        label
+            display: none
+
+        .input-box
+            flex: 1
+            min-width: 0
+
+        .input-text
+            border: 0
+            background: none
+            box-shadow: none
+
+    &__actions
+        .btn
+            padding: 0 20px
+            background: none
+            box-shadow: none
+            color: var(--text)
+            font-weight: bold
+            font-size: 14px
+
+            &:before
+                content: 'Calcular'
+
+            span
+                display: none
+
+    &__naosei
+        color: rgba(0, 0, 0, .4)
+        font-size: 12px
+        line-height: 1
+
+    &__content
+        display: flex
+        align-items: center

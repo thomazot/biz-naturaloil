@@ -98,12 +98,6 @@
          * addSVG() - defaults
          */
         if (neon.default_SVGs !== false) {
-            var truck = {
-                'img-truck': {
-                    selector: '.frete__title',
-                    mode: 'append',
-                },
-            }
             var svgs = {
                 'img-truck': {
                     selector:
@@ -158,7 +152,6 @@
             }
             $j(document).ready(function () {
                 addSVG(svgs)
-                addSVG(truck)
             })
         }
         if (neon.addSVG !== false) {
@@ -1236,7 +1229,7 @@ $j.fn.neonTheme.custom = {
     m_myaccount: false, // ativa o responsivo da Minha Conta
     m_mycart: false, // ativa o responsivo do Meu Carrinho
     m_parcelamento: true, // ativa o responsivo do parcelamento na página de produto
-    m_frete: true, // ativa o responsivo do cálculo de frete na página do produto
+    m_frete: false, // ativa o responsivo do cálculo de frete na página do produto
     m_produto: true, // ativa o responsivo de cada bloco da página de produto
     m_tabs: true, // ativa o responsivo do componente .tabs do tema
     m_painelCliente: true, // ativa o responsivo do Menu do Painel de Cliente
@@ -1245,10 +1238,13 @@ $j.fn.neonTheme.custom = {
      */
     dropFrom: false,
     addSVG: {
-        'img-truck': {
-            selector: '.frete .frete__content .input-box label',
+        'z-heart': {
+            selector: '.add-to-links .link-wishlist a',
             mode: 'prepend',
-            ratio: false,
+        },
+        'z-frete': {
+            selector: '.frete__title',
+            mode: 'prepend',
         },
     },
 }
@@ -1440,6 +1436,33 @@ function search($) {
         .css('width', `${menuHeaderWidth + searchWidth}px`)
 }
 
+function joinsaleAdjuste($) {
+    $('.jointsales__row').each(function () {
+        const essential = $('<div class="jointsales__essential"></div>')
+        const currentName = $('.jointsales__currentin .title').text()
+        const productNames = []
+
+        productNames.push(currentName)
+
+        $('.jointsales__item .title').each(function () {
+            productNames.push($(this).text())
+        })
+
+        essential.prepend(
+            $('<div class="jointsales__name-product"></div>').html(
+                productNames.join('<span class="more-name">+</span>')
+            )
+        )
+
+        $(
+            '.jointsales__totals, .jointsales__payments, .jointsales__action',
+            this
+        ).wrapAll(essential)
+
+        $(this).addClass('on')
+    })
+}
+
 $j(document)
     .ready(function ($) {
         // document.ready
@@ -1450,6 +1473,9 @@ $j(document)
 
         //  Size search desktop
         search($)
+
+        // CompreJunto ajuste
+        joinsaleAdjuste($)
 
         // Menu Categories
         $('.categories .parent').click(function (event) {

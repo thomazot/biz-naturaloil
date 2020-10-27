@@ -1,3 +1,17 @@
 .related
+    @media media-min-sm
+        border-top: solid 1px var(--border-products)
+
+    &__subtitle, &__add-checkbox
+        display: none
+
     &__title, &__content
-        container()
+        @media media-min-sm
+            container()
+
+    &__title
+        @media media-min-sm
+            titleCollateral()
+
+            padding: 50px 0
+            text-align: center
