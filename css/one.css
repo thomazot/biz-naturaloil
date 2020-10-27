@@ -10782,7 +10782,6 @@ table .change-product-link:hover {
     margin: 0 -1rem 2rem;
     padding: 0;
     width: auto;
-    background: #304855;
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   }
   .checkout-onepage-index .biz-modal-frame .modal-container .std {
@@ -12953,6 +12952,9 @@ body:not(.cms-home) #escolha-a-finalidade .slick-arrow {
     flex: 0 0 100%;
     margin-left: 0;
   }
+}
+.reviews__add .review-summary {
+  justify-content: flex-start;
 }
 .reviews__add .title {
   color: var(--text-two);
