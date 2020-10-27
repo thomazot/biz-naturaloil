@@ -1,0 +1,169 @@
+.catalog-product-view
+    .breadcrumb
+        container()
+
+    .col-main
+        padding: 0
+
+    .main
+        margin: 0
+
+        &-container
+            max-width: none
+            width: 100%
+
+.product-essential
+    container()
+
+.product-collateral
+    @media media-max-lg
+        container()
+
+.product-image-gallery, .product-image-thumbs .thumb-link
+    box-shadow: 0 0 0 1px var(--border-products)
+
+.product-image-thumbs .thumb-link:hover, .product-image-thumbs .thumb-link.on
+    box-shadow: 0 0 0 1px var(--secundary)
+
+.prod
+    &__shop
+        .col
+            flex: 1
+            min-width: 0
+
+        .add-to-cart-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 20px
+            padding: 0 16px 0 55px
+            max-width: 100%
+            width: 280px
+            height: 55px
+            border-radius: 55px
+            background: var(--tertiary)
+            box-shadow: none
+            color: var(--tertiary-contrast)
+            font-weight: bold
+            font-size: 16px
+            line-height: 1
+
+    &__call-to-action
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        margin-bottom: 40px
+
+        .add-to-cart
+            margin-bottom: 0
+
+    &__name
+        h1
+            color: var(--text)
+            font-weight: bold
+            font-size: 26px
+            line-height: 1.2
+
+        .brand
+            padding: 0
+
+            .thumb
+                display: none
+
+            a
+                color: #000
+                font-weight: regular
+                font-size: 14px
+                opacity: .3
+
+                &:before
+                    content: 'Marca: '
+
+                &:after
+                    content: attr(title)
+
+    &__prices
+        padding: 30px 0
+
+        .old-price
+            padding: 5px 0
+
+            .label
+                display: none
+
+            .price
+                text-decoration: none
+
+                span
+                    color: #cacaca
+                    text-decoration: line-through
+                    font-weight: medium
+                    font-size: 18px
+
+        .special-price, .regular-price
+            padding: 5px 0
+
+            .label
+                display: none
+
+            .price span
+                color: var(--text)
+                font-weight: bold
+                font-size: 28px
+
+        .preco-parcelado-sem-juros
+            + .preco-parcelado
+                display: none
+
+        .price-box-parcelado
+            padding: 5px 0
+
+            .s-juros, .upto
+                display: none
+
+            .preco-parcelado, .preco-parcelado-sem-juros
+                font-size: 12px
+
+                &:before
+                    content: 'ou em '
+
+                &:after
+                    content: ' no cartão de crédito'
+
+                &:before, &:after, .de span, .num span, .value span
+                    color: var(--text)
+                    font-weight: medium
+                    font-size: 14px
+
+@media media-min-lg
+    .prod
+        &__img
+            flex: 1
+            min-width: 0
+
+        &__shop
+            flex: 0 1 490px
+
+    .product-image-container
+        display: flex
+
+    .product-image
+        flex: 1
+        min-width: 0
+
+    .more-views
+        order: -1
+        margin-right: 30px
+        width: 70px
+
+    .product-image-thumbs
+        display: block
+
+@media media-max-sm
+    .tabs
+        margin-top: 20px
+
+    .product-collateral
+        .tabs__tab.on, .tabs__tab, .jointsales__title, .related__title, .reviews__title
+            font-weight: medium
+            font-size: 14px
